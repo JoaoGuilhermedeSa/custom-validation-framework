@@ -10,15 +10,15 @@ public class App {
 
     public static void main(String[] args) throws IllegalAccessException {
         User user = new User();
-        user.setName(" ");
+        user.setName("name");
 
         ValidationEngine validationEngine = new ValidationEngine();
         Set<String> errors = validationEngine.validate(user);
 
         if (errors.isEmpty()) {
-            System.out.println("User is valid.");
+            System.out.println("Object is valid.");
         } else {
-            System.out.println("User is invalid:");
+            System.out.println("Object is invalid:");
             for (String error : errors) {
                 System.out.println("- " + error);
             }
